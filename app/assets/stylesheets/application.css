@@ -6,4 +6,5 @@
  *= require_tree
  *= require formtastic-bootstrap
  *= require formtastic
+ *= require custom
 */
