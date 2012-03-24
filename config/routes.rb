@@ -1,4 +1,9 @@
 IndaboApp::Application.routes.draw do
+  resources :bookings
+  resources :users
+  resources :venues
+  root :to => 'venues#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

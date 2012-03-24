@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IndaboApp</title>
+  <title>Indabo.com</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<header class="navbar navbar-fixed-top">
+ 	<div class="navbar-inner">
+    	<div class="container">
+    		<nav>
+    			<%= link_to "sample app", '#', id: "logo" %>
+        	</nav>
+            <ul class="nav pull-right">
+            	<li><%= link_to "Venues", venues_path %></li>
+            	<li><%= link_to "Bookings", bookings_path %></li>
+            	<li><%= link_to "Users", users_path %></li>
+            </ul>
+    	</div>
+	</div>
+</header>
+
+<div class="container">
+      <%= yield %>
+</div>
 
 </body>
 </html>
