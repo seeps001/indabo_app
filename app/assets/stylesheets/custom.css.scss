@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body {
-	padding-top: 100px;
+	padding-top: 120px;
 
 }
 
@@ -24,8 +24,26 @@ div[class^="span"] {
 	margin-bottom: 2px;
 	background-color: #EBECE4;
 	border-radius: 4px;
+
 }
 
+.span6 {
+	-o-box-shadow: 2px 1px 2px hsla(0,0%,0%,.3);
+    -webkit-box-shadow: 2px 1px 2px hsla(0,0%,0%,.3);
+    box-shadow: 2px 1px 2px hsla(0,0%,0%,.3);
+}
+
+.form {
+	background-color: #EEF3E2;
+}
+
+.formheader {
+	height: 50px;
+	background-color: #7FFF00;
+    background-image: -webkit-linear-gradient(top, #F0FFFF, #E0EEEE);
+	background-image: -o-linear-gradient(top, #F0FFFF, #E0EEEE);
+	background-image: linear-gradient(top, #F0FFFF, #E0EEEE);
+}
 
 .image-block {
 	height: 300px;
@@ -35,10 +53,6 @@ div[class^="span"] {
 	height: 50px;
 	border-radius: 8px;
 	background-color: #458B00;
-	background-image: -moz-linear-gradient(
-        hsla(0,0%,100%,0),
-        hsla(0,0%,100%,.2) 50px
-    );
     background-image: -webkit-gradient(
         linear, 0 0, 0 50,
         from(hsla(0,0%,100%,0)),
@@ -54,13 +68,18 @@ a.button {
 	height: 20px;
 }
 
+td img {
+	height: 50px;
+	width: 50px;
+	max-width: 50px;
+}
+
 /******* Slider **********/
 
 #dev7link {
     position:absolute;
     top:0;
     left:50px;
-    background:url(images/dev7logo.png) no-repeat;
     width:60px;
     height:67px;
     border:0;
@@ -81,12 +100,13 @@ a.button {
 
 .theme-default .nivoSlider {
 	position:relative;
-	background:#fff url(../images/loading.gif) no-repeat 50% 50%;
+	background:#fff;
     margin-bottom:50px;
     -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
-    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -o-box-shadow: 0px 1px 5px 0px #4a4a4a;
     box-shadow: 0px 1px 5px 0px #4a4a4a;
 }
+
 .theme-default .nivoSlider img {
 	position:absolute;
 	top:0px;
@@ -107,8 +127,7 @@ a.button {
 .theme-default .nivo-controlNav a {
 	display:block;
 	width:22px;
-	height:22px;
-	background:url(../images/bullets.png) no-repeat;
+	height:22px;;
 	text-indent:-9999px;
 	border:0;
 	margin-right:3px;
@@ -121,8 +140,7 @@ a.button {
 .theme-default .nivo-directionNav a {
 	display:block;
 	width:30px;
-	height:30px;
-	background:url(../images/arrows.png) no-repeat;
+	height:30px;;
 	text-indent:-9999px;
 	border:0;
 }
@@ -144,3 +162,4 @@ a.button {
 .theme-default .nivo-caption a:hover {
     color:#fff;
 }
+

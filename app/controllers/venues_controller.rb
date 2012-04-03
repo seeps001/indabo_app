@@ -1,7 +1,8 @@
 class VenuesController < ApplicationController
  
   def home
-    @venue = Venue.new
+    @newvenue = Venue.new
+    @searchvenue = Venue.new
   end
 
   def index

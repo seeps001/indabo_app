@@ -1,0 +1,6 @@
+<%= form_tag incivents_path, :method => 'get' do %>
+    <%= text_field_tag :location, params[:search] %>
+    <%= text_field_tag :venue_size, params[:search] %>
+    <%= text_field_tag :venue_category, params[:search] %>
+    <%= submit_tag "Search" %>
+<% end %>

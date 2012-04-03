@@ -1,4 +1,4 @@
-<h1>Listing venues</h1>
+<h1></h1>
 
 <table class="table table-striped">
   <thead>
@@ -9,6 +9,8 @@
         <th>Venue Size</th>
         <th>Venue Category</th>
         <th>Contact no</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -21,8 +23,7 @@
                 <td><%= venue.venue_category %></td>
                 <td><%= venue.contact_no %></td>
                 <td><%= link_to 'Show', venue %></td>
-                <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
-                <td><%= link_to 'Destroy', venue, confirm: 'Are you sure?', method: :delete %></td>
+                <td><%= image_tag("thumbnail.png", :alt => "Indabo") %></td>
             </tr>
         <% end %>
     </tbody>
