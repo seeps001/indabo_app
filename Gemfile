@@ -5,7 +5,6 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', '1.3.4'
 gem 'formtastic', '2.0.2'
 gem 'bootstrap-sass', '2.0.0'
 gem 'formtastic-bootstrap'
@@ -16,6 +15,15 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :test, :development do
+	gem 'sqlite3', '1.3.5'
+end
+
+
+group :production do
+	gem 'pg'
 end
 
 gem 'jquery-rails'
