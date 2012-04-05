@@ -1,35 +1,63 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="span12">
+    <div class = "formheader">
+      <h2>Venue Details</h2>
+    </div>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @venue.name %>
-</p>
+    <p>
+      <b>Name:</b>
+      <%= @venue.name %>
+    </p>
 
-<p>
-  <b>Location:</b>
-  <%= @venue.location %>
-</p>
+    <p>
+      <b>Location:</b>
+      <%= @venue.location %>
+    </p>
 
-<p>
-  <b>Description:</b>
-  <%= @venue.description %>
-</p>
+    <p>
+      <b>Description:</b>
+      <%= @venue.description %>
+    </p>
 
-<p>
-  <b>Venue size:</b>
-  <%= @venue.venue_size %>
-</p>
+    <p>
+      <b>Venue size:</b>
+      <%= @venue.venue_size %>
+    </p>
 
-<p>
-  <b>Venue category:</b>
-  <%= @venue.venue_category %>
-</p>
+    <p>
+      <b>Venue category:</b>
+      <%= @venue.venue_category %>
+    </p>
 
-<p>
-  <b>Contact no:</b>
-  <%= @venue.contact_no %>
-</p>
+    <p>
+      <b>Contact no:</b>
+      <%= @venue.contact_no %>
+    </p>
+  </div>
+</div>
+
+<div class="spacer">
+</div>
+
+<div class="row">
+  <div class="span12">
+    <div class = "formheader">
+      <h2>Make a Booking</h2>
+    </div>
+    <div class="form">
+      <%= render 'bookings/form' %>
+    </div>
+  </div>
+</div>
+
+<div class="spacer">
+</div>
 
 
-<%= link_to 'Edit', edit_venue_path(@venue) %> |
-<%= link_to 'Back', venues_path %>
+<div class="row">
+  <div class="span12">
+    <%= link_to 'Edit', edit_venue_path(@venue) %> |
+    <%= link_to 'Back', venues_path %>
+  </div>
+</div>
