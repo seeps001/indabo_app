@@ -7,7 +7,4 @@
  *= require formtastic
  *= require formtastic_changes
  *= require nivo-slider
- *= require custom
 */
-
-@import "bootstrap";
