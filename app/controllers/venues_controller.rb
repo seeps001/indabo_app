@@ -17,9 +17,7 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
-    @booking = @venue.bookings.new
-    @booking.start_date_time = Time.now
-    @booking.end_date_time = Time.now
+    @booking = @venue.bookings.new(:start_date => Date.today, :start_time => Time.now, :end_date => Date.today, :end_time => Time.now)
     # respond_to do |format|
     #   format.html # show.html.erb
     #   format.json { render json: @venue }

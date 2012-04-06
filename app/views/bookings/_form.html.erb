@@ -1,8 +1,11 @@
 <%= semantic_form_for(@booking) do |f| %>
 	<%= f.inputs do %>
   		<%= f.input :description %>
-    	<%= f.input :start_date_time, :as => :datetime, :order => [:hour, :day, :month, :year] %>
-    	<%= f.input :end_date_time, :as => :datetime, :order => [:hour, :day, :month, :year] %>
+    	<%= f.input :start_date, :hint => 'Format: Year Month Day', %>
+    	<%= f.input :start_time, :hint => 'Format: HH:MM' %>
+    	<%= f.input :end_date, :hint => 'Format: Year Month Day' %>
+    	<%= f.input :end_time, :hint => 'Format: HH:MM'  %>
+    	<%= f.input :venue_id, :as => :hidden %>
   	<% end %>
   	<%= f.buttons %>
 <% end %>

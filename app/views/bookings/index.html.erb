@@ -4,10 +4,12 @@
   <thead>
     <tr>
     <th>Booking reference</th>
-    <th>Date time</th>
+    <th>Description</th>
     <th>Venue</th>
-    <th>User</th>
-    <th></th>
+    <th>Start Date</th>
+    <th>Start Time</th>
+    <th>End Date</th>
+    <th>End Time</th>
     <th></th>
     <th></th>
     </tr>
@@ -17,12 +19,13 @@
       <tr>
         <td><%= booking.booking_reference %></td>
         <td><%= booking.description %></td>
-        <td><%= booking.start_date_time %></td>
-        <td><%= booking.end_date_time %></td>
-        <td><%= booking.venue_id %></td>
+        <td><%= booking.venue.name %></td>
+        <td><%= booking.start_date %></td>
+        <td><%= booking.end_date %></td>
+        <td><%= booking.start_time %></td>
+        <td><%= booking.end_time %></td>
         <td><%= link_to 'Show', booking %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
-        <td><%= link_to 'Destroy', booking, confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
