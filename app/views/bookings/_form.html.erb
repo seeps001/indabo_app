@@ -1,11 +1,9 @@
-<%= semantic_form_for(@booking) do |f| %>
-	<%= f.inputs do %>
-  		<%= f.input :description %>
-    	<%= f.input :start_date, :hint => 'Format: Year Month Day', %>
-    	<%= f.input :start_time, :hint => 'Format: HH:MM' %>
-    	<%= f.input :end_date, :hint => 'Format: Year Month Day' %>
-    	<%= f.input :end_time, :hint => 'Format: HH:MM'  %>
-    	<%= f.input :venue_id, :as => :hidden %>
-  	<% end %>
-  	<%= f.buttons %>
+<%= simple_form_for(@booking, :html => { :class => 'form-vertical'}) do |f| %>
+	<%= f.input :description %>
+	<%= f.input :start_date %>
+	<%= f.input :start_time %>
+	<%= f.input :end_date %>
+	<%= f.input :end_time %>
+	<%= f.input :venue_id, :as => :hidden %>
+  	<%= f.button :submit %>
 <% end %>

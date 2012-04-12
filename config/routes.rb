@@ -1,5 +1,5 @@
 IndaboApp::Application.routes.draw do
-  resources :bookings
+  resources :bookings, :only => [:edit, :create, :update, :destroy, :show]
   resources :users
   resources :venues
   root :to => 'venues#home'

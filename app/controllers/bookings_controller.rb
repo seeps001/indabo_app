@@ -1,19 +1,8 @@
 class BookingsController < ApplicationController
 
-
-  def index
-    @bookings = Booking.all
-  end
-
-
   def show
     @booking = Booking.find(params[:id])
   end
-
-  def new
-    @booking = Booking.new
-  end
-
 
   def edit
     @booking = Booking.find(params[:id])
@@ -22,12 +11,12 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(params[:booking])
-
+    @venue = Venue.find(cookies[:viewed_venue_id])
     respond_to do |format|
       if @booking.save
         format.html { redirect_to bookings_path, notice: 'Booking was successfully updated.' }
       else
-        format.html { render action: "new", error: 'Oops, there was a problem creating the booking.' }
+        format.html { render 'new', error: 'Oops, there was a problem creating the booking.' }
       end
     end
   end

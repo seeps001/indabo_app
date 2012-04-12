@@ -1,12 +1,6 @@
-<%= semantic_form_for(@newvenue) do |f| %>
-
-	<%= f.inputs do %>
-		<%= f.input :location %>
-		<%= f.input :venue_category, :as => :select, :collection => ["Sports Field - Soccer", "Sports Field - General", "Hall -Church", "Hall - Community", "Hall - Other"] %>
-		<%= f.input :venue_size, :as => :select, :collection => ["Small", "Medium", "Large"] %>
-	<% end %>
- 	<%= f.buttons do %>
- 		<%= f.commit_button "Register Venue" %>
- 	<% end %>
-
+<%= simple_form_for(@newvenue, :html => { :class => 'form-vertical'}) do |f| %>
+	<%= f.input :location %>
+	<%= f.input :venue_category, :as => :select, :collection => ["Sports Field - Soccer", "Sports Field - General", "Hall -Church", "Hall - Community", "Hall - Other"] %>
+	<%= f.input :venue_size, :as => :select, :collection => ["Small", "Medium", "Large"] %>
+ 	<%= f.button :submit %>
 <% end %>
