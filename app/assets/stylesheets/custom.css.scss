@@ -6,7 +6,7 @@ body {
 }
 
 .navbar-inner {
-	margin-top: 7px;
+	padding-top: 10px;
 	background-color: #EEF3E2;
 	background-image: -webkit-linear-gradient(top, #EEF3E2, #E0EEEE);
 	background-image: -o-linear-gradient(top, #EEF3E2, #E0EEEE);
@@ -23,25 +23,16 @@ div[class^="span"] {
 	margin-bottom: 2px;
 	background-color: #EBECE4;
 	border-radius: 4px;
-
 }
 
 .span6 {
 	-o-box-shadow: 2px 1px 2px hsla(0,0%,0%,.3);
     -webkit-box-shadow: 2px 1px 2px hsla(0,0%,0%,.3);
-    box-shadow: 2px 1px 2px hsla(0,0%,0%,.3);
+    box-shadow: 2px 1px 2px hsla(0,0%,0%,.3)
 }
 
-.form {
-	background-color: #EEF3E2;
-}
-
-.formheader {
-	height: 50px;
-	background-color: #7FFF00;
-    background-image: -webkit-linear-gradient(top, #F0FFFF, #E0EEEE);
-	background-image: -o-linear-gradient(top, #F0FFFF, #E0EEEE);
-	background-image: linear-gradient(top, #F0FFFF, #E0EEEE);
+div[class^="form"] {
+	padding-left: 5px;
 }
 
 .image-block {
@@ -71,6 +62,45 @@ td img {
 	height: 50px;
 	width: 50px;
 	max-width: 50px;
+}
+
+a.row-link {
+	display: block;
+}
+
+div.link-list {
+	padding: 10px 0 0 10px;
+	height: 247px;
+}
+
+p.links {
+	margin-bottom: 1em;
+}
+
+/******* Forms**********/
+
+form {
+	margin: 0;
+}
+
+.span12 input[type="text"] {
+	width: 680px;
+}
+
+.span8 input[type="text"] {
+	width: 500px;
+}
+
+.form {
+	background-color: #EEF3E2;
+}
+
+.formheader {
+	height: 50px;
+	background-color: #7FFF00;
+    background-image: -webkit-linear-gradient(top, #F0FFFF, #E0EEEE);
+	background-image: -o-linear-gradient(top, #F0FFFF, #E0EEEE);
+	background-image: linear-gradient(top, #F0FFFF, #E0EEEE);
 }
 
 /******* Slider **********/

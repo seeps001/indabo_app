@@ -35,7 +35,7 @@
 </div>
 
 <div class="row">
-	<div class="span6">
+	<div class="span8">
     <div class = "formheader">
       <h2>Search for a Venue</h2>
     </div>
@@ -43,16 +43,26 @@
 			<%= render 'venues/searchvenue_form' %>
 		</div>
 	</div>
-
-	<div class="span6">
+  <div class="span4">
     <div class = "formheader">
-      <h2>Register a Venue</h2>
+      <h2>Browse Venue Types</h2>
     </div>
-		<div class="form">
-			<%= render 'venues/newvenue_form' %>
-		</div>
-	</div>
+    <div class="form">
+      <div class="link-list">
+        <p class="links"><%= link_to "Sports Field - Soccer", category_search_url("Sports Field - Soccer") %></p>
+        <p class="links"><%= link_to "Sports Field - General", category_search_url("Sports Field - General")%></p>
+        <p class="links"><%= link_to "Hall - Church", category_search_url("Hall - Church") %></p>
+        <p class="links"><%= link_to "Hall - Community", category_search_url("Hall - Community") %></p>
+        <p class="links"><%= link_to "Hall - Other",  category_search_url("Hall - Other") %></p>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<br />
+
+<%= link_to 'Register a New Venue', new_venue_path %>
 
 <div class="spacer">
 </div>

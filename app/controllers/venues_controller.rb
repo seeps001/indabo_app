@@ -2,13 +2,15 @@ class VenuesController < ApplicationController
  
   def home
     @newvenue = Venue.new
-    @searchvenue = Venue.new
 
   end
 
   def index
-    @venues = Venue.all
-
+    if params[:search]
+      @venues = Venue.search(params[:search][:location], params[:search][:venue_category], params[:search][:venue_size])
+    else
+      @venues = Venue.all
+    end
     # respond_to do |format|
     #   format.html # index.html.erb
     #   format.json { render json: @venues }
@@ -17,7 +19,7 @@ class VenuesController < ApplicationController
 
   def show
     @venue = Venue.find(params[:id])
-    @booking = @venue.bookings.new(:start_date => Date.today, :start_time => Time.now, :end_date => Date.today, :end_time => Time.now)
+    @booking = @venue.bookings.new(:confirmed => false, :start_date => Date.today, :start_time => Time.now, :end_date => Date.today, :end_time => Time.now)
     # respond_to do |format|
     #   format.html # show.html.erb
     #   format.json { render json: @venue }

@@ -1,0 +1,11 @@
+<%= link_to venue, :class => "row-link" do %>
+	<tr>
+	    <td><%= link_to venue.name, venue %></td>
+	    <td><%= venue.location %></td>
+	    <td><%= venue.description %></td>
+	    <td><%= venue.venue_size %></td>
+	    <td><%= venue.venue_category %></td>
+	    <td><%= venue.contact_no %></td>
+	    <td><%= image_tag("thumbnail.png", :alt => "Indabo") %></td>
+	</tr>
+<% end %>

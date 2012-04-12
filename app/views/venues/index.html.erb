@@ -14,21 +14,10 @@
       </tr>
     </thead>
     <tbody>
-        <% @venues.each do |venue| %>
-            <tr>
-                <td><%= venue.name %></td>
-                <td><%= venue.location %></td>
-                <td><%= venue.description %></td>
-                <td><%= venue.venue_size %></td>
-                <td><%= venue.venue_category %></td>
-                <td><%= venue.contact_no %></td>
-                <td><%= link_to 'Show', venue %></td>
-                <td><%= image_tag("thumbnail.png", :alt => "Indabo") %></td>
-            </tr>
-        <% end %>
+        <%= render @venues %>
     </tbody>
 </table>
 
 <br />
 
-<%= link_to 'New Venue', new_venue_path %>
+<%= link_to 'Register a New Venue', new_venue_path %>

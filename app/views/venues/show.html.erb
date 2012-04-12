@@ -43,7 +43,7 @@
 <div class="row">
   <div class="span12">
     <div class = "formheader">
-      <h2>Make a Booking</h2>
+      <h2>Make a Booking for this Venue</h2>
     </div>
     <div class="form">
       <%= render 'bookings/form' %>
@@ -58,6 +58,7 @@
 <div class="row">
   <div class="span12">
     <%= link_to 'Edit', edit_venue_path(@venue) %> |
+    <%= link_to 'Delete', @venue, confirm: 'Are you sure?', method: :delete %> |
     <%= link_to 'Back', venues_path %>
   </div>
 </div>

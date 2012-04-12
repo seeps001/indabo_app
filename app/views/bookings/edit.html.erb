@@ -1,6 +1,13 @@
-<h1>Editing booking</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="span12">
+    <div class = "formheader">
+      <h2>Edit a Booking</h2>
+    </div>
+    <div class="form">
+      <%= render 'bookings/form' %>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Show', @booking %> |
 <%= link_to 'Back', bookings_path %>

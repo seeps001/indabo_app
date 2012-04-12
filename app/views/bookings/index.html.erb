@@ -10,6 +10,7 @@
     <th>Start Time</th>
     <th>End Date</th>
     <th>End Time</th>
+    <th>Confirmed</th>
     <th></th>
     <th></th>
     </tr>
@@ -18,19 +19,20 @@
     <% @bookings.each do |booking| %>
       <tr>
         <td><%= booking.booking_reference %></td>
-        <td><%= booking.description %></td>
+        <td><%= link_to booking.description, booking %></td>
         <td><%= booking.venue.name %></td>
         <td><%= booking.start_date %></td>
         <td><%= booking.end_date %></td>
         <td><%= booking.start_time %></td>
         <td><%= booking.end_time %></td>
-        <td><%= link_to 'Show', booking %></td>
+        <% if booking.confirmed? %>
+          <td>Yes</td>
+        <% else %>
+          <td>No</td>
+        <% end %>
+        <td><%= link_to 'Delete', booking, confirm: 'Are you sure?', method: :delete %></td>
         <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New Booking', new_booking_path %>

@@ -1,5 +1,13 @@
 class BookingsController < ApplicationController
 
+  def index
+    @bookings = Booking.all
+  end
+
+  def new
+    @booking = Booking.new
+  end
+
   def show
     @booking = Booking.find(params[:id])
   end
@@ -11,7 +19,6 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(params[:booking])
-    @venue = Venue.find(cookies[:viewed_venue_id])
     respond_to do |format|
       if @booking.save
         format.html { redirect_to bookings_path, notice: 'Booking was successfully updated.' }

@@ -1,7 +1,7 @@
-<%= simple_form_for(@searchvenue, :html => { :class => 'form-vertical'}) do |f| %>
+<%= simple_form_for(:search, :url => venues_path, :html => {:method => :get, :class => 'form-vertical'}) do |f| %>
 
 	<%= f.input :location %>
-	<%= f.input :venue_category, :as => :select, :collection => ["Sports Field - Soccer", "Sports Field - General", "Hall -Church", "Hall - Community", "Hall - Other"] %>
+	<%= f.input :venue_category, :as => :select, :collection => ["Sports Field - Soccer", "Sports Field - General", "Hall - Church", "Hall - Community", "Hall - Other"] %>
 	<%= f.input :venue_size, :as => :select, :collection => ["Small", "Medium", "Large"] %>
 	<%= f.button :submit %>
 
