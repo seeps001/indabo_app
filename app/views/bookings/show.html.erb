@@ -1,46 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="span12">
 
-<p>
-  <b>Booking reference:</b>
-  <%= @booking.booking_reference %>
-</p>
+    <p>
+      <b>Booking reference:</b>
+      <%= @booking.booking_reference %>
+    </p>
 
-<p>
-  <b>Description:</b>
-  <%= @booking.description %>
-</p>
+    <p>
+      <b>Description:</b>
+      <%= @booking.description %>
+    </p>
 
-<p>
-  <b>Start date:</b>
-  <%= @booking.start_date %>
-</p>
+    <p>
+      <b>Start date:</b>
+      <%= @booking.start_date %>
+    </p>
 
-<p>
-  <b>Start time:</b>
-  <%= @booking.start_time %>
-</p>
+    <p>
+      <b>Start time:</b>
+      <%= @booking.start_time %>
+    </p>
 
-<p>
-  <b>End date:</b>
-  <%= @booking.end_date %>
-</p>
+    <p>
+      <b>End date:</b>
+      <%= @booking.end_date %>
+    </p>
 
-<p>
-  <b>End time:</b>
-  <%= @booking.end_time %>
-</p>
+    <p>
+      <b>End time:</b>
+      <%= @booking.end_time %>
+    </p>
 
-<p>
-  <b>Venue:</b>
-  <%= @booking.venue.name %>
-</p>
+    <p>
+      <b>Venue:</b>
+      <%= @booking.venue.name %>
+    </p>
 
-<p>
-  <b>User:</b>
-  <%= @booking.user_id %>
-</p>
+    <p>
+      <b>User:</b>
+      <%= @booking.user_id %>
+    </p>
 
 
-<%= link_to 'Edit', edit_booking_path(@booking) %> |
-<%= link_to 'Back', bookings_path %> | 
-<%= link_to 'Destroy', @booking, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to 'Edit', edit_booking_path(@booking) %> |
+    <%= link_to 'Back', bookings_path %> | 
+    <%= link_to 'Destroy', @booking, confirm: 'Are you sure?', method: :delete %>
+  </div>
+</div>

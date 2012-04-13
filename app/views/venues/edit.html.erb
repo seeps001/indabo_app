@@ -1,6 +1,14 @@
-<h1>Editing venue</h1>
 
-<%= render 'form' %>
+<div class="row">
+  <div class="span12">
+    <div class = "formheader">
+      <h2>Edit a Venue</h2>
+    </div>
+    <div class="form">
+      <%= render 'venues/form' %>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Show', @venue %> |
 <%= link_to 'Back', venues_path %>
