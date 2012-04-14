@@ -19,25 +19,27 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(params[:booking])
-    respond_to do |format|
-      if @booking.save
-        format.html { redirect_to bookings_path, notice: 'Booking was successfully updated.' }
-      else
-        format.html { render 'new', error: 'Oops, there was a problem creating the booking.' }
-      end
+    if @booking.save
+      ### To be changed ###
+      BookingMails.booking_request_mail(@booking.venue.name, @booking.start_date, @booking.start_time, booking_url(@booking)).deliver
+      ###
+      flash[:success] = 'The venue owner has been informed of your booking request.'
+      redirect_to bookings_path
+    else
+      flash[:error] = 'Oops, there was a problem creating the booking.'
+      render 'new'
     end
   end
 
 
   def update
     @booking = Booking.find(params[:id])
-
-    respond_to do |format|
-      if @booking.update_attributes(params[:booking])
-        format.html { redirect_to bookings_path, notice: 'Booking was successfully updated.' }
-      else
-        format.html { render action: "edit", error: 'Oops, there was a problem updating the booking.' }
-      end
+    if @booking.update_attributes(params[:booking])
+      flash[:notice] = 'Booking was successfully updated.'
+      redirect_to bookings_path
+    else
+      flash[:error] = 'Oops, there was a problem updating the booking.'
+      render 'edit'
     end
   end
 

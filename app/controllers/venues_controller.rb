@@ -43,18 +43,22 @@ class VenuesController < ApplicationController
   def create 
     @venue = Venue.new(params[:venue])
     if @venue.save
-      redirect_to venues_path, notice: 'Venue was successfully created.'
+      flash[:notice] = 'Venue was successfully created.'
+      redirect_to venues_path
     else
-      render 'new', error: 'Oops, there was a problem creating the user.'
+      flash[:error] = 'Oops, there was a problem creating the user.'
+      render 'new'
     end
   end
 
   def update
     @venue = Venue.find(params[:id])
     if @venue.update_attributes(params[:venue])
-      redirect_to @venue, notice: 'Venue was successfully updated.'
+      flash[:notice] = 'Venue was successfully updated.'
+      redirect_to @venue
     else
-      render 'edit', error: 'Oops, there was a problem creating the user.'
+      flash[:error] = 'Oops, there was a problem creating the user.'
+      render 'edit'
     end
 
     # respond_to do |format|
