@@ -55,7 +55,7 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     if @venue.update_attributes(params[:venue])
       flash[:notice] = 'Venue was successfully updated.'
-      redirect_to @venue
+      redirect_to venues_path
     else
       flash[:error] = 'Oops, there was a problem creating the user.'
       render 'edit'
@@ -72,11 +72,10 @@ class VenuesController < ApplicationController
     # end
   end
 
-  # DELETE /venues/1
-  # DELETE /venues/1.json
   def destroy
     @venue = Venue.find(params[:id])
     @venue.destroy
+    redirect_to venues_url 
 
     # respond_to do |format|
     #   format.html { redirect_to venues_url }
