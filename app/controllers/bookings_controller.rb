@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(params[:booking])
     if @booking.save
       ### To be changed ###
-      BookingMails.booking_request_mail(@booking.venue.name, @booking.start_date, @booking.start_time, booking_url(@booking)).deliver
+      ### BookingMails.booking_request_mail(@booking.venue.name, @booking.start_date, @booking.start_time, booking_url(@booking)).deliver
       ###
       flash[:success] = 'The venue owner has been informed of your booking request.'
       redirect_to bookings_path
